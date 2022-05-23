@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  
+  <script class="lg0wuf46" src="js/lg0wuf46_console.js" crossorigin="anonymous"></script>
+    <script class="lg0wuf46">
+      if(window.eruda){
+        eruda.init({
+          theme: 'dark'
+        });
+        sessionStorage.setItem('__console_available', true);
+        document.addEventListener('showconsole', function () {eruda.show()});
+        document.addEventListener('hideconsole', function () {eruda.hide()});
+      }else if(document.querySelector('c-toggler')){
+
+      }
+      setTimeout(function(){
+        var scripts = document.querySelectorAll('.lg0wuf46');
+        scripts.forEach(function(el){document.head.removeChild(el)});
+      }, 0);
+    </script>
+  
+  
+  <script src="js/index.js" async="true"></script>
+  <title>YTDOWN</title>
+</head>
+<body>
+  <div class="loader-P hide"><div class="loader"></div></div>
+  <div id="root">
+      <header>
+      <nav class="nav">
+        <div class="logo">
+          <p>YTDOWN</p>
+        </div>
+        <ul class="navItem">
+          <li><a href="/">Home</a></li>
+          <li><a href="https://www.instagram.com/itz_yash_malik__/" target="_blank">FollowMe</a></li>
+        </ul>
+      <div class="btn">
+        <i class="icons" onclick="show(this)">menu</i>
+      </div>
+      </nav>
+    </header>
+      <div class="main">
+        <div class="form">
+        <h3>Video Link Put Here</h3>
+        <input placeholder="Enter Video Link" id="url"/>
+        <button onclick="main()">Submit</button>
+        </div>
+        <div class="VidDetails hide">
+          <h3>Video Info ....</h3>
+          <div class="box">
+            <div class="video-thumb">
+              <!-- <img src="assets/img/image.jpeg" alt="" /> -->
+            <!--   <div class="x">
+            </div>
+            <p class="title">Here Shown Some Video Title</p> -->
+            </div>
+            <div class="video-quality">
+              <h4>Avl Quality</h4>
+              <select name="quality" id="quality" style="width:80%;margin:10px 0px;outline:2px solid #171c24;border:none;">
+                
+              </select>
+            </div>
+          </div>
+          <div class="down-btn">
+            <button type="submit" onclick="Download()">Download</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>

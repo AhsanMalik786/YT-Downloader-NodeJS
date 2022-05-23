@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: normal;
+  src: url(/font/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/font/roboto.woff2) format('woff2');
+}
+.icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+body {
+  background: #f2f2f2;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  background: #171c24;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
+.nav .logo p {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.nav .navItem {}
+.btn {
+  display: none;
+}
+.nav .navItem li {
+  display: inline-block;
+  padding: 2px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+.main {
+  max-width: 600px;
+  /* height: 150px; */
+  margin: 10px auto;
+  background: #8080;
+  border: 2px solid #171c24;
+}
+.main .form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.main .form input{
+  border: 2px solid #171c24;
+  outline: none;
+  padding: 5px 8px;
+  margin: 5px 0px;
+  border-radius: 5px;
+}
+.main .form button{
+  border: 2px solid #171c24;
+  background: #f2f2f2;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.main .form button:hover{
+  border: 2px solid #80800;
+  background: #171c24;
+  color: #fff;
+  font-weight: 600;
+}
+.main .VidDetails{
+  padding: 20px;
+}
+
+.main .VidDetails .box{
+  display: flex;
+  /* text-align: center; */
+  padding: 10px;
+}
+.main .VidDetails .box .video-thumb{
+  width: 50%;
+  margin: 10px 0px;
+  padding: 8px;
+}
+.main .VidDetails .box .video-quality{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.main .VidDetails .box .video-thumb img{
+  margin: 5px 0px;
+  width: 100%;
+  height: 150px;
+}
+.main .VidDetails .box .video-thumb div{
+  margin: 5px 0px;
+  width: 100%;
+  height: 150px;
+  background: #808080;
+}
+
+.main .VidDetails .box .video-thumb p{
+  text-align: justify;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.down-btn{
+  text-align: center;
+}
+.down-btn button{
+  padding: 5px 8px;
+  margin: 5px;
+  background: #f2f2f2;
+  color: #000;
+  border: 2px solid #171c24;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.loader-P{
+  width: 100vw;
+  height: 100vh;
+  background: #f4f4f4;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+.loader-P .loader{
+  width: 200px;
+  height: 200px;
+  border-top: 5px solid #171c24;
+  border-bottom: 5px solid #171c24;
+  border-radius: 50%;
+  animation: rotate 200ms ease infinite;
+}
+.hide{
+  display: none;
+}
+@keyframes rotate{
+  to{
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width:900px) {
+  .btn {
+    display: block;
+    cursor: pointer;
+  }
+  .nav {
+    padding: 0px 20px;
+    height: 60px;
+  }
+  .nav .logo p {
+    font-size: 20px;
+  }
+  .nav .navItem {
+    background: #171c24;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: -50%;
+    text-align: center;
+    transition: left 200ms ease;
+    z-index: 1;
+  }
+  .nav .navItem li {
+    display: block;
+    margin: 30px 5px;
+    padding: 5px 0px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .main{
+    width: 90%;
+  }
+  .main .VidDetails .box .video-thumb{
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .main .VidDetails .box{
+    display: block;
+    text-align: center;
+  }
+  .main .VidDetails .box .video-quality{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  
+}
